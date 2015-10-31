@@ -1,0 +1,7 @@
+This is a small python library for programmatically building EPUB books. It provides [API](http://code.google.com/p/python-epub-builder/source/browse/trunk/epub.py) for easily constructing and packaging EPUBs from text content.
+
+To retain full power of the [EPUB specification](http://www.idpf.org/specs.htm), the library makes little abstraction over EPUB constructs such as spine and TOC map, so you need to understand them (the [EPUB specification](http://www.idpf.org/specs.htm) makes a short and easy read, or you can use this [tutorial](http://www.ibm.com/developerworks/xml/tutorials/x-epubtut/index.html)) to get the most out of it. On the other hand, the API hides many of the technical details of the XML-based specification from you, so that you can focus on generating and manipulating text content.
+
+Finally, a [even simpler API](http://code.google.com/p/python-epub-builder/source/browse/trunk/ez_epub.py) is provided to allow you to make EPUB with a single function call. There's an example for **[converting a Project Gutenburg book from TXT to EPUB in 5 minutes](https://code.google.com/p/python-epub-builder/wiki/CreateEpubIn5Min)**.
+
+The library uses [Genshi](http://genshi.edgewall.org/) for HTML/XML template, but you can use whatever mechanism for generating your content pages. Also, there is a dependency on [lxml](http://codespeak.net/lxml/) to parse EPUB manifest file. Finally, I use [epubcheck](http://code.google.com/p/epubcheck/) to validate EPUB, so you should copy the jar file into the same directory as the py files.
